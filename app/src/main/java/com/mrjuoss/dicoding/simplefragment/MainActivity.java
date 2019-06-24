@@ -33,17 +33,19 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     @Override
     public void onClick(View view) {
-        if (view == btnHome) {
-            mHome();
-        }
-        if (view == btnAbout) {
-            mAbout();
-        }
-        if (view == btnHelp) {
-            mHelp();
-        }
-        if (view == btnExit) {
-            mExit();
+        switch (view.getId()) {
+            case R.id.btn_home:
+                mHome();
+                break;
+            case R.id.btn_about:
+                mAbout();
+                break;
+            case R.id.btn_help:
+                mHelp();
+                break;
+            case R.id.btn_exit:
+                mExit();
+                break;
         }
     }
 
